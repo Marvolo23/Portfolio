@@ -1,15 +1,25 @@
 <div class="container">
         <h1>Welcome to the <strong><%= title %></strong> page</h1>
 </div>
+<div class="card mb-3" style="max-width: 275px;">
+  <div class="row g-0">
+      <div class="card-body">
+        <h5 class="card-title">Nelson Garcia</h5>
+        <p class="card-text">Email: nelsongarcia62@gmail.com
+        Phone: 519-276-8289
+        </p>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="container2">
   <form method="POST" action="mailto:nelsion@hotmail.com">
-
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
     <label for="country">Country</label>
     <select id="country" name="country">
       <option value="canada">Canada</option>
@@ -19,12 +29,9 @@
       <option value="spain">Spain</option>
       <option value="england">England</option>
     </select>
-
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-  
     <input type="submit" value="Send Email">
-
   </form>
 </div>
 
@@ -70,5 +77,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
  
+ }
+ .card{
+   text-align: left;
+   background-color: #85c1e962;
+   border-radius: 30px;
+
  }
 </style>
