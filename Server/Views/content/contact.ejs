@@ -2,7 +2,7 @@
         <h1>Welcome to the <strong><%= title %></strong> page</h1>
 </div>
 <div class="container2">
-  <form action="action_page.php">
+  <form method="POST" action="mailto:nelsion@hotmail.com">
 
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -22,8 +22,8 @@
 
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
+  
+    <input type="submit" value="Send Email">
 
   </form>
 </div>
@@ -31,6 +31,7 @@
 <style>
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
+  background-color: rgba(255, 255, 255, 0.425);
   width: 100%;
   padding: 12px; 
   border: 1px solid #154360;
@@ -44,7 +45,7 @@ input[type=text], select, textarea {
 /* Style the submit button */
 input[type=submit] {
   background-color: #34495E;
-  color: white;
+  color: rgba(255, 255, 255, 0.425);
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -59,11 +60,15 @@ input[type=submit]:hover {
 /* Add a background color and some padding around the form */
 .container2 {
   border-radius: 60px;
-  background-color: #85C1E9;
+  background-color: #85c1e962;
   padding: 50px;
 }
 
 body {
-       background-color: #1F7BB5;
-}
+  background-image: url("Assets/images/contactUs.jpg");
+  background-color: #cccccc67;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+ }
 </style>

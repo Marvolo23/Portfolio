@@ -32,6 +32,10 @@ router.get('/services', function (req, res, next) {
 router.get('/contact', function (req, res, next) {
     res.render('index', { title: 'Contact Me', page: 'contact' });
 });
+/* GET resume page. */
+router.get('/resume', function (req, res, next) {
+    res.render('index', { title: 'Resume', page: 'resume' });
+});
 /* GET games-list */
 router.get('/games-list', function (req, res, next) {
     // db.games.find()
