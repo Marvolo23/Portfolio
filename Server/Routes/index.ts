@@ -3,7 +3,7 @@ const router = express.Router();
 export default router;
 
 // get a reference to the Game Model Class
-import Game from '../Models/game';
+import Contacts from '../Models/contacts';
 
 /* GET home page. */
 router.get('/', function(req, res, next) 
@@ -42,11 +42,11 @@ router.get('/contact', function(req, res, next)
 });
 
 /* GET games-list */
-router.get('/games-list', function(req, res, next)
+router.get('/contact-list', function(req, res, next)
 {
 
-  // db.games.find()
-  Game.find(function(err, gamesCollection)
+  // db.contacts.find()
+  Contacts.find(function(err, ContactsCollection)
   {
     if(err)
     {
@@ -54,7 +54,7 @@ router.get('/games-list', function(req, res, next)
       res.end(err);
     }
 
-    console.log(gamesCollection);
+    console.log(ContactsCollection);
   });
 });
 

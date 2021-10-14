@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 exports.default = router;
 // get a reference to the Game Model Class
-const game_1 = __importDefault(require("../Models/game"));
+const contacts_1 = __importDefault(require("../Models/contacts"));
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', { title: 'Home', page: 'home' });
@@ -37,14 +37,14 @@ router.get('/resume', function (req, res, next) {
     res.render('index', { title: 'Resume', page: 'resume' });
 });
 /* GET games-list */
-router.get('/games-list', function (req, res, next) {
-    // db.games.find()
-    game_1.default.find(function (err, gamesCollection) {
+router.get('/contacts-list', function (req, res, next) {
+    // db.contacts.find()
+    contacts_1.default.find(function (err, ContactsCollection) {
         if (err) {
             console.error(err);
             res.end(err);
         }
-        console.log(gamesCollection);
+        console.log(ContactsCollection);
     });
 });
 //module.exports = router;
